@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-# 2-print_alphabet.py
-# Ifeanyi I Ekezie
+# chr change the ASCII
 
-for letter in range(ord('a'), ord('z') + 1):
-    print("{:c}".format(letter), end="")
-
-print()  # Print a new line after the alphabet
+"""Print the alphabet in lowercase, not followed by a new line."""
+for i in range(97, 123):
+    print("{}".format(chr(i)), end="")
