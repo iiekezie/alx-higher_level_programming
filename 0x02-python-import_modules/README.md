@@ -43,6 +43,9 @@ Project done during **Full Stack Software Engineering studies** at **ALX Softwar
 - All your files must be executable
 - The length of your files will be tested using `wc`
 
+## Directory Structure
+
+```
 0x02-python-import_modules/
 │
 ├── 0-add.py
@@ -66,6 +69,7 @@ Project done during **Full Stack Software Engineering studies** at **ALX Softwar
 │
 └── c_scripts/
     └── hidden_4.c
+```
 
 ## Tasks
 
