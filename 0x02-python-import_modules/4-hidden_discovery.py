@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # 4-hidden_discovery.py
 # Ifeanyi I Ekezie
-import hidden_4
-
 if __name__ == "__main__":
-    names = dir(hidden_4)
-    
-    for name in sorted(names):
-        if not name.startswith("__"):
+    import hidden_4
+    # interaction in each word of the list
+    for name in dir(hidden_4):
+        if "__" in name:
+            continue
+        else:
             print(name)
