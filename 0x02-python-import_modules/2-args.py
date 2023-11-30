@@ -3,12 +3,16 @@
 # Ifeanyi I Ekezie
 if __name__ == "__main__":
     """Print the number of and list of arguments."""
-    from sys import argv
-    argc = len(argv) - 1
-    plural_s = 's' if argc != 1 else ''
-    period = '.' if argc == 0 else ':'
-
-    print("{} argument{}{}{}".format(argc, plural_s, period, '\n' * (argc > 0)))
-
-    for i, arg in enumerate(argv[1:], 1):
-        print("{}: {}".format(i, arg))
+    import sys
+    a = len(sys.argv)
+    if a == 1:
+        print("{:d} arguments.".format(a - 1))
+    elif a == 2:
+        print("{:d} argument:".format(a - 1))
+        print("{:d}: {:s}".format(a - 1, sys.argv[1]))
+    else:
+        print("{:d} arguments:".format(a - 1))
+        for letter in range(a):
+            if letter == 0:
+                continue
+            print("{:d}: {:s}".format(letter, sys.argv[letter]))
