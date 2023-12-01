@@ -1,33 +1,14 @@
 #!/usr/bin/python3
-# 100-my_calculator.py
-# Ifeanyi I Ekezie
-import sys
-from calculator_1 import add, sub, mul, div
 
-def calculator():
-    if len(sys.argv) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+def magic_calculation(a, b):
+    """Handle basic arithmetic operations."""
+    from magic_calculation_102 import add, sub
 
-    a = int(sys.argv[1])
-    operator = sys.argv[2]
-    b = int(sys.argv[3])
-
-    if operator not in ['+', '-', '*', '/']:
-        print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
-
-    c = 0
-    if operator == '+':
+    if a < b:
         c = add(a, b)
-    elif operator == '-':
-        c = sub(a, b)
-    elif operator == '*':
-        c = mul(a, b)
-    elif operator == '/':
-        c = div(a, b)
+        for letter in range(4, 6):
+            c = add(c, letter)
+        return (c)
 
-    print(f"{a} {operator} {b} = {c}")
-
-if __name__ == "__main__":
-    calculator()
+    else:
+        return(sub(a, b))
