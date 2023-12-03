@@ -6,8 +6,8 @@ def print_list_integer(my_list=[]):
     :param my_list: List of integers
     :type my_list: list
     """
-    for i in my_list:
-        print("{:d}".format(i))
+    for letter in my_list:
+        print("{:d}".format(letter))
 
 # Example usage
 if __name__ == "__main__":
