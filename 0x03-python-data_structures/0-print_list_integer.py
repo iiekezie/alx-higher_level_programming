@@ -1,15 +1,14 @@
 #!/usr/bin/python3
+if __name__ == "__main__":
 def print_list_integer(my_list=[]):
     """
-    Print integers of a list.
+    Print all integers of a list, one integer per line.
 
-    :param my_list: List of integers
-    :type my_list: list
+    Args:
+        my_list (list): A list of integers.
+
+    Returns:
+        None
     """
-    for letter in my_list:
-        print("{:d}".format(letter))
-
-# Example usage
-if __name__ == "__main__":
-    my_list = [1, 2, 3, 4, 5]
-    print_list_integer(my_list)
+    for number in my_list:
+        print(number)
