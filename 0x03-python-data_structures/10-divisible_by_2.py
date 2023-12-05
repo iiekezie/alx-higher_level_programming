@@ -3,7 +3,6 @@ def divisible_by_2(my_list=[]):
     counter = 0
     list_result = my_list[:]
     for i in list_result:
-        # Check if the element is divisible by 2
         if i % 2 is 0:
             list_result[counter] = True
         else:
