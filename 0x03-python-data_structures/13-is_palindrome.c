@@ -1,80 +1,51 @@
-/*
- * File: 13-is_palindrome.c
- * Auth: Ifeanyi I Ekezie
- */
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
-#include <stddef.h>
-
-listint_t *reverse_listint(listint_t **head);
-int is_palindrome(listint_t **head);
-
-/**
- * reverse_listint - Reverses a linked list.
- * @head: Pointer to pointer of first node of listint_t list.
- *
- * Return: Pointer to the first node of the reversed list.
- */
-listint_t *reverse_listint(listint_t **head)
-{
-    listint_t *prev = NULL;
-    listint_t *current = *head;
-    listint_t *next;
-
-    while (current)
-    {
-        next = current->next;
-        current->next = prev;
-        prev = current;
-        current = next;
-    }
-
-    *head = prev;
-    return (*head);
-}
 
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
- * @head: double pointer to the head of the linked list
- *
- * Return: 1 if the linked list is a palindrome, 0 otherwise
+ * @head: pointer to pointer of first node of listint_t list
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *slow = *head;
-    listint_t *fast = *head;
-    listint_t *prev_slow = NULL;
-    int palindrome = 1;
+    listint_t *current;
+    int *stack;
+    int top, i;
 
-    if (*head == NULL || (*head)->next == NULL)
-        return (palindrome);
+    if (head == NULL || *head == NULL)
+        return (1);
 
-    while (fast != NULL && fast->next != NULL)
+    current = *head;
+    stack = malloc(sizeof(int));
+    if (stack == NULL)
+        return (0);
+
+    top = 0;
+    while (current != NULL)
     {
-        fast = fast->next->next;
-
-        // Reverse the first half of the list
-        listint_t *next = slow->next;
-        slow->next = prev_slow;
-        prev_slow = slow;
-        slow = next;
+        top++;
+        stack = realloc(stack, sizeof(int) * top);
+        if (stack == NULL)
+            return (0);
+        stack[top - 1] = current->n;
+        current = current->next;
     }
 
-    // If the number of elements is odd, move slow one step forward
-    if (fast != NULL)
-        slow = slow->next;
-
-    // Compare the reversed first half with the second half
-    while (prev_slow != NULL && slow != NULL)
+    current = *head;
+    i = top - 1;
+    while (i >= top / 2)
     {
-        if (prev_slow->n != slow->n)
+        if (stack[i] != current->n)
         {
-            palindrome = 0;
-            break;
+            free(stack);
+            return (0);
         }
-        prev_slow = prev_slow->next;
-        slow = slow->next;
+        current = current->next;
+        i--;
     }
 
-    return (palindrome);
+    free(stack);
+    return (1);
 }
+
