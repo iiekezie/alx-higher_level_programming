@@ -1,20 +1,10 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    """Prints a matrix of integers.
+
+    Args:
+        matrix (list of lists of ints, optional): The matrix to print. Defaults to [[]].
+    """
     for row in matrix:
-        for i, elem in enumerate(row):
-            if i != len(row) - 1:
-                print("{:d} ".format(elem), end="")
-            else:
-                print("{:d}".format(elem), end="")
-        print()
-
-if __name__ == "__main__":
-    matrix = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ]
-
-    print_matrix_integer(matrix)
-    print("--")
-    print_matrix_integer()
+        # Print each item of the row, separated by a space, and formatted as an integer
+        print(" ".join("{:d}".format(item) for item in row))
