@@ -1,10 +1,7 @@
 # Project Name: # 0x04. Python - More Data Structures: Set, Dictionary
 
-![Python logo]
-This project is part of the ALX Higher Level Programming curriculum. It covers the topics of sets, dictionaries, and more data structures in Python.
-
 ## Project Overview
-This project consists of Python scripts that cover various topics related to more advanced data structures in Python. The tasks include working with lists, dictionaries, sets, and more. Each script addresses a specific task and provides a solution in Python.
+This project is part of the ALX Higher Level Programming curriculum. It covers the topics of sets, dictionaries, and more data structures in Python. This project consists of Python scripts that cover various topics related to more advanced data structures in Python. The tasks include working with lists, dictionaries, sets, and more. Each script addresses a specific task and provides a solution in Python.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -153,6 +150,5 @@ Description of the second image structure.
 Some tasks may require writing C scripts to test the Python functions. These scripts should be placed in a subfolder called `tests` and have the extension `.c`. For example, the C script for task 0 should be named `tests/0-square_matrix_simple.c`.
 
 ## Author :black_nib:
-**Ifeanyi I Ekezie**
-- GitHub: [iiekezie](:wq
-https://github.com/iiekezie)
+
+* **Ifeanyi I Ekezie** <[iiekezie](https://github.com/iiekezie)>
