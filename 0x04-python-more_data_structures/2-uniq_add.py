@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    new_list = []
-
-    for element in my_list:
-        new_list.append(replace if element == search else element)
-
-    return new_list
+def uniq_add(my_list=[]):
+    """Use a set to store unique integers."""
+    result = 0
+    for x in set(my_list):
+        result += x
+    # Sum all the unique integers in the set
+    return (result)
