@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    if not my_list or not isinstance(my_list, list):
-        return None
-    new_list = [replace if x == search else x for x in my_list]
-    return new_list
+    """Create a new list to store the modified elements"""
+    new_list = my_list[:]
+    for i in range(len(new_list)):
+        if new_list[i] == search:
+            new_list[i] = replace
+    return (new_list)
