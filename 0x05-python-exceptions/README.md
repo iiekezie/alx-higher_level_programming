@@ -218,19 +218,20 @@ This project focuses on Python programming concepts related to exceptions and er
 
 ## Tasks
 
-| Task Number | File Name                     | Description                                                   | Prototype                                                   |
-|-------------|-------------------------------|---------------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|
-| 0           | 0-safe_print_list.py          | Print elements of a list safely                                | `def safe_print_list(my_list=[], x=0):`                     |
-| 1           | 1-safe_print_integer.py       | Print an integer with "{:d}".format()                         | `def safe_print_integer(value):`                            |
-| 2           | 2-safe_print_list_integers.py | Print and count integers in a list                             | `def safe_print_list_integers(my_list=[], x=0):`           |
-| 3           | 3-safe_print_division.py      | Divide 2 integers and print the result                         | `def safe_print_division(a, b):`                            | 
-| 4           | 4-list_division.py            | Divide element by element in two lists                         | `def list_division(my_list_1, my_list_2, list_length):`    |
-| 5           | 5-raise_exception.py          | Raise a type exception                                         | `def raise_exception():`                                    |
-| 6           | 6-raise_exception_msg.py      | Raise a name exception with a message                          | `def raise_exception_msg(message=""):`                     | 
-| 7           | 100-safe_print_integer_err.py | Safe integer print with error message                          | `def safe_print_integer_err(value):`                       |
-| 8           | 101-safe_function.py          | Execute a function safely                                      | `def safe_function(fct, *args):`                            |
-| 9           | 102-magic_calculation.py       | Replicate Python bytecode                                      | `def magic_calculation(a, b):`                              |
-| 10          | 103-python.c                  | C functions for Python lists, bytes, and float objects        | See task description for prototypes and details             |
+| Task Number | File Name                     | Description                   | Prototype                                                  |
+|-------------|-------------------------------|-------------------------------|------------------------------------------------------------|
+| 0           | 0-safe_print_list.py          | Safe list printing            | `def safe_print_list(my_list=[], x=0):`                    |
+| 1           | 1-safe_print_integer.py       | Safe printing of an integers list | `def safe_print_integer(value):`                         |
+| 2           | 2-safe_print_list_integers.py | Print and count integers      | `def safe_print_list_integers(my_list=[], x=0):`          |
+| 3           | 3-safe_print_division.py      | Integers division with debug  | `def safe_print_division(a, b):`                           |
+| 4           | 4-list_division.py            | Divide a list                 | `def list_division(my_list_1, my_list_2, list_length):`    |
+| 5           | 5-raise_exception.py          | Raise exception               | `def raise_exception():`                                   |
+| 6           | 6-raise_exception_msg.py      | Raise a message               | `def raise_exception_msg(message=""):`                    |
+| 7 (Advanced)| 100-safe_print_integer_err.py | Safe integer print with error message | `def safe_print_integer_err(value):`                 |
+| 8 (Advanced)| 101-safe_function.py           | Safe function                 | `def safe_function(fct, *args):`                          |
+| 9 (Advanced)| 102-magic_calculation.py       | ByteCode -> Python #4         | `def magic_calculation(a, b):`                            |
+| 10 (Advanced)| 103-python.c                 | CPython #2: PyFloatObject      | See Python C API documentation                            |
 
-## Author 🖋️
-- **Ifeanyi I Ekezie** - [iiekezie](https://github.com/iiekezie)
+## Author :black_nib:
+
+* **Ifeanyi I Ekezie** <[iiekezie](https://github.com/iiekezie)>
