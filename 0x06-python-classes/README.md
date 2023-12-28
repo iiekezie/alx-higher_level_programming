@@ -3,11 +3,6 @@
 # Project Overview
 This project focuses on understanding Object-Oriented Programming (OOP) concepts in Python. The tasks involve creating a class Square with various functionalities such as size validation, area calculation, printing the square, handling coordinates, and implementing comparators. Additionally, an advanced task involves implementing a singly linked list and another task requires writing a Python class based on given bytecode.
 
-#Technologies
-Python 3.8.5
-pycodestyle 2.8.*
-Ubuntu 20.04 LTS
-
 
 ## Requirements
 
@@ -23,6 +18,11 @@ Ubuntu 20.04 LTS
 - The length of files will be tested using wc
 - All modules, classes, and functions should have documentation (Python docstrings)
 - Documentation should be a real sentence explaining the purpose of the module, class, or method
+
+#### Technologies
+- Python 3.8.5
+- pycodestyle 2.8.*
+- Ubuntu 20.04 LTS
 
 ### Directory Structure
 The project directory structure should include the following:
