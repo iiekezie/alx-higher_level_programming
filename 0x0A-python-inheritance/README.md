@@ -90,8 +90,6 @@ Description of the organization of project files and folders.
 | 4 | 4-inherits_from.py | Write a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False. | `def inherits_from(obj, a_class):` | [Test](#task-4-only-subclass-of) |
 | 5 | 5-base_geometry.py | Write an empty class BaseGeometry. | | [Test](#task-5-geometry-module) |
 | 6 | 6-base_geometry.py | Write a class BaseGeometry (based on 5-base_geometry.py) with a public instance method `def area(self):` that raises an Exception with the message area() is not implemented. | | [Test](#task-6-improve-geometry) |
-
-
 | 7 | 7-base_geometry.py | Write a class BaseGeometry (based on 6-base_geometry.py) with public instance methods `def area(self):` and `def integer_validator(self, name, value):` | | [Test](#task-7-integer-validator) |
 | 8 | 8-rectangle.py | Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). | | [Test](#task-8-rectangle) |
 | 9 | 9-rectangle.py | Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py) | | [Test](#task-9-full-rectangle) |
