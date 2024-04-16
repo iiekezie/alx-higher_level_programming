@@ -1,3 +1,4 @@
+======================
 The ``7-base_geometry`` module
 ======================
 
@@ -28,10 +29,10 @@ This class should define 2 functions
     True
 
 Should test publicity of methods
-    >>> BaseGeometry.area	#doctest: +ELLIPSIS
+    >>> BaseGeometry.area  # doctest: +ELLIPSIS
     <function BaseGeometry.area at 0x...>
 
-    >>> bg.integer_validator	#doctest: +ELLIPSIS
+    >>> bg.integer_validator  # doctest: +ELLIPSIS
     <bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry object at 0x...>>
 
 And no instance attributes or methods
