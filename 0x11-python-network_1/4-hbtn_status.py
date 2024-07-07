@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status."""
+# script that fetches https://intranet.hbtn.io/status
+
 import requests
 
-
-if __name__ == "__main__":
-    r = requests.get("https://intranet.hbtn.io/status")
-    print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+if "__main__" == __name__:
+    status = requests.get('https://intranet.hbtn.io/status')
+    # u'{"type":"User"...'
+    status_text = status.text
+    print('Body response:')
+    print('\t- type: {}'.format(type(status_text)))
+    print('\t- content: {}'.format(status_text))
