@@ -1,14 +1,12 @@
- POST request to a given URL with a given email.
+#!/usr/bin/python3
+# takes in a URL and an email address, send a POST request to the URL
 
-Usage: ./6-post_email.py <URL> <email>
-  - Displays the body of the response.
-"""
+import requests
 import sys
-import urllib.request
 
-if __name__ == "__main__":
-    url = sys.argv[1]
+if __name__ == '__main__':
 
-    request = urllib.request.Request(url)
-    with urllib.request.urlopen(request) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+    parameter1 = sys.argv[1]
+    parameter2 = {'email': sys.argv[2]}
+    status = requests.post(parameter1, data=parameter2)
+    print(status.text)
