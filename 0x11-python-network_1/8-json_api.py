@@ -1,29 +1,38 @@
 #!/usr/bin/python3
-"""Sends a POST request to http://0.0.0.0:5000/search_user with a given letter.
-
-Usage: ./8-json_api.py <letter>
-  - The letter is sent as the value of the variable `q`.
-  - If no letter is provided, sends `q=""`.
 """
+Python script that takes in a letter and sends a POST request to
+http://0.0.0.0:5000/search_user with the letter as a parameter.
+
+The letter must be sent in the variable q.
+If no argument is given, set q="". If the response body is properly JSON
+formatted and not empty, display the id and name like this:
+[<id>] <name>. Otherwise:
+- Display Not a valid JSON if the JSON is invalid
+- Display No result if the JSON is empty
+"""
+
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    data = {'q': ""}
+    url = 'http://0.0.0.0:5000/search_user'
+    
+    if len(sys.argv) == 1:
+        q = ""
+    else:
+        q = sys.argv[1]
 
     try:
-        data['q'] = sys.argv[1]
-    except:
-        pass
+        response = requests.post(url, data={'q': q})
+        json_response = response.json()
 
-    response = requests.post('http://0.0.0.0:5000/search_user', data)
-
-    try:
-        json_o = response.json()
-        if not json_o:
-            print("No result")
+        if json_response:
+            print("[{}] {}".format(json_response.get('id'), json_response.get('name')))
         else:
-            print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
-    except:
+            print("No result")
+
+    except ValueError:
         print("Not a valid JSON")
+    
+    except Exception as e:
+        print("No result")
